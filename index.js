@@ -54,7 +54,7 @@ function postRetweet() {
 
 async function main() {
     try {
-        const params = readParams
+        const params = readParams()
         const data = await getTweets(params.since_id);
         const tweets = data.statuses;
         console.log('Tweets are here', tweets.length)
